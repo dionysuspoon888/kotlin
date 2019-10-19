@@ -5,15 +5,34 @@ package com.example.kotlin
  */
 class AccountData {
 
-    var name:String;
-    var pwd:String;
-    var mark:Int;
+    var name:String? = null
+    get() {
+        if(field == null){
+            return "NAME!";
+        }
+        return field;}
+    set(value){
+        field = value+" OK!";
+    }
 
-    constructor(name: String, pwd: String, mark: Int) {
+    var pwd:String?
+        get() {
+            if(field == null){
+                return "PWD!";
+            }
+            return field;}
+        set(value){
+            field = value;
+        }
+
+    var mark:Int?;
+
+    constructor(name: String?, pwd: String?, mark: Int?) {
         this.name = name
         this.pwd = pwd
         this.mark = mark
     }
+
 
 
 }

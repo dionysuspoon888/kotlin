@@ -7,6 +7,8 @@ class GlobalConstants {
 
     companion object {
        lateinit var AccountData:AccountData;
+        var countedLogin:Boolean = false;
+        var countLogin:Int = 0;
 
     }
 
